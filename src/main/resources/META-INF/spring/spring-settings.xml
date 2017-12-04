@@ -11,6 +11,7 @@
     <property name="message" value="I'll be back"></property>
   </bean>
 
+
   <bean class="quaters.InjectRandomIntAnnotationBeanPostProcessor"/>
 
   <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
@@ -18,5 +19,7 @@
  <bean class="quaters.ProfilingHandlerBeanPostProcessor"/>
 
  <bean class="quaters.PostProxyInvokerContextListener"/>
+
+ <bean class="quaters.DeprecationHandlerBeanFactoryPostProcessor"/>
 
 </beans>

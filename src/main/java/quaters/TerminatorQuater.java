@@ -2,6 +2,7 @@ package quaters;
 
 import javax.annotation.PostConstruct;
 
+@DeprecatedClass(NewImpl = T1000.class)
 @Profiling
 public class TerminatorQuater implements Quater {
     @InjectRandomInt (min = 2, max  = 7)
