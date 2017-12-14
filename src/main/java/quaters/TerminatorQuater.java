@@ -5,6 +5,8 @@ import javax.annotation.PostConstruct;
 @DeprecatedClass(NewImpl = T1000.class)
 @Profiling
 public class TerminatorQuater implements Quater {
+
+
     @InjectRandomInt (min = 2, max  = 7)
     private int repeat;
     private String message;
@@ -31,5 +33,10 @@ public class TerminatorQuater implements Quater {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    //Нужен для 3-й части, когда тестируем PropertyFileApplicationContext
+    public void setRepeat(int repeat) {
+        this.repeat = repeat;
     }
 }
