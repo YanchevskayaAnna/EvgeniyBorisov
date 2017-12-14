@@ -9,7 +9,9 @@ import java.util.Random;
 @ComponentScan(basePackages = "screensaver")
 public class Config {
     @Bean
-    @Scope("prototype")
+//    @Scope("prototype") если так поставить, будут разные цвета
+//    @Scope("singleton") если так поставить, будет один и тот же цвет
+    @Scope("periodical") //хочу, чтобы цвет менялся каждые 3 секунды. но такого скоупа нет, пишем свой
     public Color color(){
         Random random = new Random();
         return new Color(random.nextInt(255), random.nextInt(255), random.nextInt(255));
